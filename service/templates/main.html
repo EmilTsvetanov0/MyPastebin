@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}КодоВставлялка{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <form method="post">
+        <!--        Выбор кода и тд. Первая строка-->
+        <div class="row">
+            <div class="col">
+                <h2>Введите код:</h2>
+            </div>
+
+            <div class="col" aria-label="Programming Language Selector">
+                <div class="mb-3">
+                    <select class="form-select form-select-lg" id="coding-language" name = "coding_language">
+                        <option value="" selected hidden>Определить автоматически</option>
+                        <option value="0">Определить автоматически</option>
+                        <option value="language-cpp">C++</option>
+                        <option value="language-python">Python</option>
+                        <option value="language-javascript">JavaScript</option>
+                        <option value="language-csharp">C#</option>
+                        <option value="language-c">C</option>
+                        <option value="language-go">Go</option>
+                        <option value="language-applescript">AppleScript</option>
+                        <option value="language-kotlin">Kotlin</option>
+                        <option value="language-pascal">Pascal</option>
+                        <option value="language-java">Java</option>
+                        <option value="language-jq">JQ</option>
+                        <option value="language-r">R</option>
+                        <option value="language-wolfram">Mathematica/Wolfram Language</option>
+                        <option value="language-rust">Rust</option>
+                        <option value="language-lua">Lua</option>
+                        <option value="language-vbnet">Visual Basic .NET</option>
+                        <option value="language-swift">Swift</option>
+                        <option value="language-scala">Scala</option>
+                        <option value="language-ruby">Ruby</option>
+                        <option value="language-php">PHP</option>
+                        <option value="language-powershell">PowerShell</option>
+                        <option value="language-perl">Perl</option>
+                        <option value="language-cobol">COBOL</option>
+                        <option value="language-armasm">ARM Assembly</option>
+                        <option value="language-fortran">Fortran</option>
+                        <option value="language-erlang">Erlang</option>
+                    </select>
+                </div>
+            </div>
+
+
+        </div>
+        <br>
+        <!--    Текстоввод    -->
+        <textarea class="input-code-area" id="code" name="code"></textarea>
+        <br>
+
+        <!--        Кнопочка отправить-->
+        <div class="row">
+            <div class="col">
+                <div class="spacer"></div>
+            </div>
+            <div class="col">
+                <button id="send_code_to_server_button" class="btn1">Загрузить</button>
+                <script src="{{ url_for('static', filename='btn-1.js') }}"></script>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--<div class="row">-->
+<!--    <div class="col-md-6">Содержимое колонки 1</div>-->
+<!--    <div class="col-md-6">Содержимое колонки 2</div>-->
+<!--</div>-->
+
+</div>
+{% endblock %}

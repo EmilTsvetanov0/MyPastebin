@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  language-detecting-model:
+    build:
+      context: ./language-detecting-model
+      dockerfile: Dockerfile
+    volumes:
+      - ./language-detecting-model/model-folder/model.pkl:/app/model.pkl
+    ports:
+      - "80:80"
+
+  service:
+    build:
+      context: ./service
+      dockerfile: Dockerfile
+    ports:
+      - "1333:1333"
+
