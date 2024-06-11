@@ -5,7 +5,7 @@ A service similar to Pastebin but including automatic code language detection
 
 You need:
 - **Docker and docker-compose**
-- **Language detection model **[Link to download](https://drive.google.com/file/d/1hz0tALaw8lajZHrfokGbViSSlHG6qpgN/view?usp=drive_link)
+- **Language detection model** [Link to download](https://drive.google.com/file/d/1hz0tALaw8lajZHrfokGbViSSlHG6qpgN/view?usp=drive_link)
 
 ## Run the code
 - Copy all the files in the repository to your local folder
